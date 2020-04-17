@@ -1,0 +1,33 @@
+<template>
+    <div id="GoodsList" class="goods">
+        <goods-list-item v-for="item in goods" :key="item.id" :goods-item="item">{{item}}</goods-list-item>
+    </div>
+</template>
+<script>
+import GoodsListItem from './GoodsListItem'
+
+export default {
+    name: 'GoodsList',
+    props: {
+        goods: {
+            type: Array,
+            default () {
+                return []
+            }
+        }
+    },
+    components: {
+        GoodsListItem
+    }
+}
+</script>
+<!--  @import url();引入css类  -->
+<style scoped>
+    .goods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2px;
+    }
+
+</style>
