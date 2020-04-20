@@ -2,7 +2,8 @@
     <div id="GoodsListItem" class="goods-item" @click="itemClick">
         <!-- <img :src="goodsItem.show ? goodsItem.show.img : goodsItem.image"  @load="imageLoad"> -->
         <!-- <img :src="goodsItem | imgShow"  @load="imageLoad"> -->
-        <img :src="showImage"  @load="imageLoad">
+        <!-- <img :src="showImage"  @load="imageLoad"> -->
+        <img v-lazy="showImage"  @load="imageLoad">
 
         <div class="goods-info">
             <p>{{goodsItem.title}}</p>

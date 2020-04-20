@@ -79,3 +79,21 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #  tabControl 的吸顶效果
 1.  滚动多高，出现吸顶效果   offsetTop
+
+#  解决移动端 300ms延迟
+1. npm  install fastclick --save
+2. main.js  import FastClick from 'fastclick'
+3. main.js  // 解决 300ms延迟
+            FastClick.attach(document.body)
+
+### 图片懒加载
+1. vue-lazyload   npm  install  vue-lazyload --save
+2. main.js  import VueLazyLoad from 'vue-lazyload'
+3. main.js   // 图片懒加载
+                Vue.use(VueLazyLoad,{
+                loading: require('./assets/images/common/placeholder.png')  //默认图片
+                })
+
+# px2vw   css 单位转化 
+1. npm  install postcss-px-to-viewport --save-dev
+2. postcss.config.js
